@@ -1,0 +1,220 @@
+
+body{
+    padding: 0px;
+    margin: 0px;;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.header {
+    width: 100%;
+    background-color: rgb(1, 184, 163);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logoimg {
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+}
+
+.anchors {
+    display: flex;
+    flex-grow: 1;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
+.anchors a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.anchors a:hover {
+    color: #ffe600;
+}
+
+@media(max-width:430px){
+    .navbar{
+        flex-direction: column;
+    }
+
+    .anchors{
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .logo{
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+    .anchors{
+        margin-bottom: 10px;
+    }
+}
+
+@media(max-width:240px){
+
+    .navbar{
+        flex-direction: column;
+    }
+
+    .anchors{
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .logo{
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+
+    .anchors{
+        margin-bottom: 10px;
+    }
+
+}
+
+@media(max-width:770px){
+    .anchors{
+        display: flex;
+        flex-grow: 1;
+
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .navbar{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+    }
+
+}
+
+
+@media(max-width:830px){
+    .anchors{
+        display: flex;
+        flex-grow: 1;
+        justify-content: space-evenly;
+    }
+}
+
+
+@media(max-width:1025px){
+    .anchors{
+        display: flex;
+        flex-grow: 1;
+        justify-content: space-evenly;
+    }
+}
+
+@media(max-width:1290px){
+    .anchors{
+        display: flex;
+        flex-grow: 1;
+        justify-content: space-evenly;
+    }
+}
+
+
+/* content styling and responsive code */
+
+.memberspic{
+    width: 100%;
+}
+
+.content{
+
+    width: 100%;
+
+}
+
+.ineer-intro-div{
+    background-color: rgb(63, 57, 57);
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 50px;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.member{
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+}
+
+
+.member{
+    background-image: url('vice.png');
+    background-size: cover;
+}
+
+#eventmanager1{
+    background-image: url('event.png');
+    background-size: cover;
+}
+
+#president{
+
+    background-image: url('precident.png');
+    background-size: cover;
+
+}
+
+#decipline1{
+ 
+    background-image: url('discipline1.png');
+    background-size: cover;
+}
+
+#sports1{
+    background-image: url('sports1.png');
+    background-size: cover;
+}
+
+#tresurer2{
+    background-image: url('tresurer2.png');
+    background-size: cover;
+}
+
+#technicalmem1{
+    background-image: url('techmem1.png');
+    background-size: cover;
+}
+
+#creativity1{
+    background-image: url('creativity1.png');
+    background-size: cover;
+
+}
+

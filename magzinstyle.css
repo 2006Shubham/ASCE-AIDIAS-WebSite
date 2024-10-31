@@ -1,0 +1,241 @@
+/* Global Styles */
+* {
+    box-sizing: border-box; /* Ensures padding does not add to element width */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    overflow-y: auto;
+}
+
+/* Container Structure */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.header {
+    width: 100%;
+    background-color: rgb(1, 184, 163);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logoimg {
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+}
+
+.anchors {
+    display: flex;
+    flex-grow: 1;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
+.anchors a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.anchors a:hover {
+    color: #ffe600;
+}
+
+/* Dropdown and Select Styling */
+.dropdown-container {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Popup Styling */
+#popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    width: 80%;
+    max-width: 400px;
+    z-index: 1000;
+    opacity: 0;
+    animation: fadeIn 0.3s forwards;
+}
+
+#popup p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+/* Button Styling */
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #028a75;
+    color: #fff;
+}
+
+/* PDF Viewer Styling */
+.pdf-viewer {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+    overflow-y: auto;
+}
+
+canvas {
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    border: 2px solid black;
+}
+
+.pdf-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    padding: 10px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1025px) {
+    .anchors {
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .anchors {
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    select {
+        font-size: 14px;
+    }
+    
+    #popup {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .pdf-viewer canvas {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 430px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .anchors {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .logoimg {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 240px) {
+    .anchors {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Scrollbar Styling for WebKit Browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f4f4f4;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #888;
+}
+
+/* For Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #f4f4f4;
+}

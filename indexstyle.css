@@ -3,52 +3,63 @@ body{
     padding: 0;
 }
 
-
-/* Navbar styling and resposive code */
-
-.header{
+.content{
+    background-color:rgb(3, 199, 173);
     width: 100%;
-    height: fit-content;
-    background-color: black;
-    position: sticky;
-    top:0px;
-
 }
-
-.container{
+.container {
     display: flex;
     flex-direction: column;
-    width: 100%;
-}
-
-.content{
-    background-color:rgb(78, 77, 77);
-    width: 100%;
-}
-
-.navbar{
-
-    display: flex;
-    gap: 20px;
-    justify-content: flex-start;
-    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
-.anchors{
-    color: white;
+.header {
+    width: 100%;
+    background-color: rgb(1, 184, 163);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.logo{
-    margin-left: 20px;
-    margin-top: 5px;
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-.logoimg{
+.logoimg {
     border-radius: 50%;
-    height: 75px;
     width: 75px;
+    height: 75px;
+    margin-left: 20px;
 }
+
+.anchors {
+    display: flex;
+    flex-grow: 1;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
+.anchors a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.anchors a:hover {
+    color: #ffe600;
+}
+
 
 @media(max-width:430px){
     .navbar{
@@ -93,13 +104,22 @@ body{
 
 }
 
-@media(max-width:770px){
+@media(max-width:600px){
     .anchors{
         display: flex;
         flex-grow: 1;
+
         justify-content: space-evenly;
         flex-wrap: wrap;
     }
+
+    .navbar{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+    }
+
+    
 
 }
 
@@ -110,6 +130,8 @@ body{
         flex-grow: 1;
         justify-content: space-evenly;
     }
+
+    
 }
 
 
@@ -134,7 +156,7 @@ body{
 .intro-container{
 
     width: 100%;
-    background-color: rgb(78, 77, 77);
+    background-color: rgb(3, 199, 173);
 
 }
 
@@ -146,16 +168,17 @@ body{
     
 }
 
-.ineer-intro-div h2,h4{
-    color: white;
+.ineer-intro-div h2,h4,h1{
+    color: rgb(249, 249, 3);
     text-align: center;
+    font-weight: bolder;
 }
 
 .ineer-intro-div p{
     text-align: center;
     padding-left: 10%;
     padding-right: 10%;
-    color: white;
+    color: rgb(249, 249, 3);
     font-weight: 500;
 }
 
@@ -200,7 +223,7 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: centers;
-    background-color: rgb(78, 77, 77);
+    background-color: rgb(10, 195, 189);
     padding: 10px;
 }
 
@@ -209,14 +232,17 @@ body{
 .card{
     height: 200px;
     width: 300px;
-    background-color:rgb(51, 50, 50);
+    background-color:rgb(134, 210, 210);
     border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
     
+
 }
+
+
 
 #deco{
     content:url('deco.jpg');

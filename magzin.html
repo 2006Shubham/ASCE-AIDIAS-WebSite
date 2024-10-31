@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazine Viewer</title>
+    <link href="magzinstyle.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="co_logo.png" alt="Logo" class="logoimg">
+                    <img src="ai_logo.png" alt="Logo" class="logoimg">
+                </div>
+                <div class="anchors">
+                    <a href="index.html">Home</a>
+                    <a href="members.html">Members</a>
+                    <a href="magzin.html">Magazine</a>
+                    <a>Events</a>
+                    <a>Social Work</a>
+                </div>
+            </nav>
+        </header>
+
+        <div class="dropdown-container">
+            <label for="yearSelect">Select Year:</label>
+            <select id="yearSelect">
+                <option value="">Select a year</option>
+                <option value="magzin.pdf">2021</option>
+                <option value="magzin.pdf">2022</option>
+                <option value="magzin.pdf">2023</option>
+            </select>
+        </div>
+
+        <div id="popup">
+            <p>View magazine for <span id="selectedYear"></span>?</p>
+            <button onclick="showPDF()">Yes</button>
+            <button onclick="closePopup()">No</button>
+        </div>
+        <div class="pdf-container">
+        <div class="pdf-viewer"></div>
+       </div>
+    </div>
+
+    <script src="magzinscript.js"></script>
+</body>
+</html>

@@ -6,7 +6,7 @@ document.addEventListener("mousemove",function(dets){
     crsrbr.style.left = dets.x - 250+"px"
     crsrbr.style.top = dets.y-250+"px"
 })
-
+  
 
 
 
