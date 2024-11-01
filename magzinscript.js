@@ -45,10 +45,24 @@ function showPDF() {
   });
 }
 
+function downloadPDF() {
+  const selectedYear = yearSelect.value;
+  const pdfUrl = `${selectedYear}`;
+
+  // Create a temporary link element
+  const link = document.createElement('a');
+  link.href = pdfUrl;
+  link.download = `${selectedYear}.pdf`; // Sets the default download filename
+  link.style.display = 'none';
+  
+  document.body.appendChild(link);
+  link.click(); // Trigger the download
+  document.body.removeChild(link); // Clean up the link element
+}
+
 function closePopup() {
   popup.style.display = 'none';
 }
-
 
 // Ensure the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function() {

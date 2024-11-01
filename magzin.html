@@ -10,19 +10,26 @@
 <body>
     <div class="container">
         <header class="header">
+
             <nav class="navbar">
+
                 <div class="logo">
-                    <img src="co_logo.png" alt="Logo" class="logoimg">
-                    <img src="ai_logo.png" alt="Logo" class="logoimg">
+                    <img src="co_logo.png" width="100" height="100" class="logoimg"></img>
                 </div>
+
                 <div class="anchors">
                     <a href="index.html">Home</a>
-                    <a href="members.html">Members</a>
-                    <a href="magzin.html">Magazine</a>
+                    <a href="members.html ">Members</a>
+                    <a href="magzin.html">Magzine</a>
                     <a>Events</a>
                     <a>Social Work</a>
                 </div>
+
+                <div class="logo">
+                    <img src="ai_logo.png" width="100" height="100" class="logoimg"></img>
+                </div>
             </nav>
+
         </header>
 
         <div class="dropdown-container">
@@ -39,7 +46,9 @@
             <p>View magazine for <span id="selectedYear"></span>?</p>
             <button onclick="showPDF()">Yes</button>
             <button onclick="closePopup()">No</button>
+            <button onclick="downloadPDF()">Download</button> <!-- New Download Button -->
         </div>
+        
         <div class="pdf-container">
         <div class="pdf-viewer"></div>
        </div>
